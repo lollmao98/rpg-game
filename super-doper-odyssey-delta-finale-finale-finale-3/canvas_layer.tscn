@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://b57sjfgp36jk0"]
+
+[ext_resource type="Script" uid="uid://jyrm18y4peog" path="res://QuestUI.gd" id="1_v2lfg"]
+[ext_resource type="Texture2D" uid="uid://vn4fmov628x4" path="res://assets/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Carved_3Slides.png" id="2_37rai"]
+[ext_resource type="FontFile" uid="uid://cfoas7lxfiiqv" path="res://Jersey10-Regular.ttf" id="3_37rai"]
+[ext_resource type="AudioStream" uid="uid://coec5b34fubtm" path="res://voices/voice_sans.mp3" id="4_mx0kw"]
+[ext_resource type="AudioStream" uid="uid://b41t5y73m5t86" path="res://voices/voice_toriel.mp3" id="5_w4oxd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0qrqu"]
+texture = ExtResource("2_37rai")
+
+[node name="QuestUI" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_v2lfg")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(100, 40)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -508.0
+offset_top = -215.0
+offset_right = 557.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_0qrqu")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 17.0
+offset_right = 1025.0
+offset_bottom = 189.0
+theme_override_fonts/font = ExtResource("3_37rai")
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="SansVoice" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_mx0kw")
+
+[node name="RalseiVoice" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_w4oxd")

@@ -1,0 +1,148 @@
+[gd_scene load_steps=20 format=3 uid="uid://cmkipm1ytvqss"]
+
+[ext_resource type="Texture2D" uid="uid://c46ptbgoo768t" path="res://assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Goblins/Troops/TNT/Red/TNT_Red.png" id="1_qkgr6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6ymm"]
+atlas = ExtResource("1_qkgr6")
+region = Rect2(0, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fu5ry"]
+atlas = ExtResource("1_qkgr6")
+region = Rect2(192, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_viqlm"]
+atlas = ExtResource("1_qkgr6")
+region = Rect2(384, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqoy0"]
+atlas = ExtResource("1_qkgr6")
+region = Rect2(576, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7tll"]
+atlas = ExtResource("1_qkgr6")
+region = Rect2(768, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gmuq"]
+atlas = ExtResource("1_qkgr6")
+region = Rect2(960, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pg7kr"]
+atlas = ExtResource("1_qkgr6")
+region = Rect2(1152, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omtc2"]
+atlas = ExtResource("1_qkgr6")
+region = Rect2(1152, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1yde"]
+atlas = ExtResource("1_qkgr6")
+region = Rect2(192, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ut4y7"]
+atlas = ExtResource("1_qkgr6")
+region = Rect2(0, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggigk"]
+atlas = ExtResource("1_qkgr6")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2rkp"]
+atlas = ExtResource("1_qkgr6")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6mlr"]
+atlas = ExtResource("1_qkgr6")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_123mb"]
+atlas = ExtResource("1_qkgr6")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3qj6"]
+atlas = ExtResource("1_qkgr6")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4us1"]
+atlas = ExtResource("1_qkgr6")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7243r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6ymm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fu5ry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_viqlm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqoy0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c7tll")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gmuq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pg7kr")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omtc2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1yde")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ut4y7")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggigk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2rkp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n6mlr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_123mb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3qj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4us1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_csp77"]
+radius = 31.0
+
+[node name="Goblin1red" type="CharacterBody2D"]
+collision_layer = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7243r")
+animation = &"hurt"
+autoplay = "hurt"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 1)
+shape = SubResource("CircleShape2D_csp77")

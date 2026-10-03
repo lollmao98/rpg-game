@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://cib1g8t2rcxgp"]
+
+[ext_resource type="FontFile" uid="uid://dnbfrvqfcxmlr" path="res://Jersey10-Regular.ttf" id="2_dwrsa"]
+[ext_resource type="AudioStream" uid="uid://5v1srx8yvisl" path="res://voice_toriel.mp3" id="3_dwrsa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0qrqu"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mx0kw"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="EndScene" type="CanvasLayer"]
+process_mode = 3
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 940.63007
+offset_bottom = 446.2325
+scale = Vector2(1.2268372, 1.4543986)
+theme_override_styles/panel = SubResource("StyleBoxFlat_0qrqu")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 17.0
+offset_top = 1.0
+offset_right = 24.0
+offset_bottom = 647.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mx0kw")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 1120.0
+offset_top = 2.0
+offset_right = 1127.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mx0kw")
+
+[node name="Panel4" type="Panel" parent="."]
+offset_left = 1.0
+offset_top = 625.0
+offset_right = 1151.0
+offset_bottom = 631.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mx0kw")
+
+[node name="Panel5" type="Panel" parent="."]
+offset_left = 1.0
+offset_top = 16.0
+offset_right = 1150.0
+offset_bottom = 22.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mx0kw")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 95.0
+offset_top = 70.0
+offset_right = 1063.0
+offset_bottom = 553.0
+theme_override_fonts/font = ExtResource("2_dwrsa")
+theme_override_font_sizes/font_size = 48
+text = "The Knight Brought peace to the land, even though it was thought to be already there.
+
+He faced true dangour, fear, threat, horror 
+He faced creatures that traumatized him
+He feared them as all the other people,
+but he did his job anyway,
+and that is being Brave
+
+- Fashi"
+autowrap_mode = 2
+
+[node name="VoiceSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_dwrsa")

@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=3 uid="uid://rj1cu8eiqys6"]
+
+[ext_resource type="Texture2D" uid="uid://bgacm4rwcgt0p" path="res://assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Goblins/Troops/TNT/Purple/TNT_Purple.png" id="1_8byij"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tl5yj"]
+atlas = ExtResource("1_8byij")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2o8n7"]
+atlas = ExtResource("1_8byij")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrm82"]
+atlas = ExtResource("1_8byij")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14ns8"]
+atlas = ExtResource("1_8byij")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yg1we"]
+atlas = ExtResource("1_8byij")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7sg7u"]
+atlas = ExtResource("1_8byij")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wioer"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tl5yj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2o8n7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xrm82")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14ns8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yg1we")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7sg7u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_csp77"]
+radius = 31.0
+
+[node name="Goblin1purple" type="CharacterBody2D"]
+collision_layer = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wioer")
+autoplay = "default"
+frame_progress = 0.6851807
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 1)
+shape = SubResource("CircleShape2D_csp77")

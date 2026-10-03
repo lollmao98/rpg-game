@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=3 uid="uid://cqaujpo6cmc1p"]
+
+[ext_resource type="Texture2D" uid="uid://duvyp6npt3fry" path="res://assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Goblins/Troops/Necromancer_creativekind-Sheet.png" id="1_gagl1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uc5mt"]
+atlas = ExtResource("1_gagl1")
+region = Rect2(0, 0, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_723ie"]
+atlas = ExtResource("1_gagl1")
+region = Rect2(160, 0, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gu5vo"]
+atlas = ExtResource("1_gagl1")
+region = Rect2(320, 0, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ud6ed"]
+atlas = ExtResource("1_gagl1")
+region = Rect2(480, 0, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1sdr7"]
+atlas = ExtResource("1_gagl1")
+region = Rect2(640, 0, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qsog"]
+atlas = ExtResource("1_gagl1")
+region = Rect2(800, 0, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpvre"]
+atlas = ExtResource("1_gagl1")
+region = Rect2(960, 0, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7uoj5"]
+atlas = ExtResource("1_gagl1")
+region = Rect2(1120, 0, 160, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tkym2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uc5mt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_723ie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gu5vo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ud6ed")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1sdr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qsog")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpvre")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7uoj5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gagl1"]
+radius = 83.0542
+
+[node name="FinalBoss" type="CharacterBody2D"]
+collision_layer = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -51)
+scale = Vector2(2.109375, 2.109375)
+sprite_frames = SubResource("SpriteFrames_tkym2")
+autoplay = "default"
+frame_progress = 0.6443363
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 13)
+shape = SubResource("CircleShape2D_gagl1")

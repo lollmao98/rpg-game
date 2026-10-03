@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://bkpptycx7l2ak"]
+
+[ext_resource type="Texture2D" uid="uid://dml4l1hw53vmc" path="res://assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Goblins/Troops/Torch/Red/Torch_Red.png" id="1_6n6bl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_el8ju"]
+atlas = ExtResource("1_6n6bl")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpcij"]
+atlas = ExtResource("1_6n6bl")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a55io"]
+atlas = ExtResource("1_6n6bl")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rnald"]
+atlas = ExtResource("1_6n6bl")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3r7wh"]
+atlas = ExtResource("1_6n6bl")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fq1yp"]
+atlas = ExtResource("1_6n6bl")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obje3"]
+atlas = ExtResource("1_6n6bl")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_weioc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_el8ju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpcij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a55io")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rnald")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3r7wh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fq1yp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obje3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 14.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_am2oc"]
+radius = 30.149628
+
+[node name="Goblin2red" type="CharacterBody2D"]
+collision_layer = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_weioc")
+autoplay = "default"
+frame_progress = 0.18746053
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_am2oc")

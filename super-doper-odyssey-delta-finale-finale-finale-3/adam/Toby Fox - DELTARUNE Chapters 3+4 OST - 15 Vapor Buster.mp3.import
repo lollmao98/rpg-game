@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://clk7s03tn8k62"
+path="res://.godot/imported/Toby Fox - DELTARUNE Chapters 3+4 OST - 15 Vapor Buster.mp3-feddc215e57dfca9c636fe054e93204a.mp3str"
+
+[deps]
+
+source_file="res://adam/Toby Fox - DELTARUNE Chapters 3+4 OST - 15 Vapor Buster.mp3"
+dest_files=["res://.godot/imported/Toby Fox - DELTARUNE Chapters 3+4 OST - 15 Vapor Buster.mp3-feddc215e57dfca9c636fe054e93204a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
